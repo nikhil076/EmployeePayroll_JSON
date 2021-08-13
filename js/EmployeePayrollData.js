@@ -1,4 +1,4 @@
-let regexName = RegExp('^[A-Z][A-Za-z ]{2,}');
+let regexName = RegExp('^[A-Z][A-Za-z ]{2,}$');
 class EmployeePayRollData {
 
     get id() { return this._id; }
@@ -35,7 +35,7 @@ class EmployeePayRollData {
         if (startDate <= new Date())
             this._startDate = startDate;
         else
-            throw 'StartDate is Invalid!'
+            throw 'StartDate is Invalid!';
     }
 
     get notes() { return this._notes; }
