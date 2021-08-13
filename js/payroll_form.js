@@ -32,6 +32,7 @@ const save = () => {
 
 const createEmployeePayRoll = () => {
     let employeePayRollData = new EmployeePayRollData();
+    employeePayRollData.id = createNewEmployeeId();
     try {
         employeePayRollData.name = getInputValueById('#name');
     } catch (error) {
@@ -46,7 +47,7 @@ const createEmployeePayRoll = () => {
     let day = getInputValueById('#day');
     let month = getInputValueById('#month');
     let year = getInputValueById('#year');
-    employeePayRollData.startDate = new Date(year, month, day);
+    employeePayRollData.startDate = new Date(year, month - 1, day);
     alert(employeePayRollData.toString());
     return employeePayRollData;
 };
@@ -99,4 +100,11 @@ const setTextValue = (property, message) => {
 
 const setValue = (property, value) => {
     document.querySelector(property).value = value;
+};
+
+const createNewEmployeeId = () => {
+    let empId = localStorage.getItem("EmployeeID");
+    empId = !empId ? 1 : (parseInt(empId) + 1).toString();
+    localStorage.setItem("EmployeeID", empId);
+    return empId;
 };
