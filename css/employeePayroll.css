@@ -43,7 +43,7 @@ body{
 }
 
 .form-content{
-    min-height: calc(100%-80px); 
+    min-height: calc(100% - 80px); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,12 +116,11 @@ label{
 .profile{
     width: 40px;
     border-radius: 50%;
-    margin-left: 8px;
+    margin-left: 5px;
 }
 
 .date-setter{
     width: 100%;
-    padding: 12px;
     resize: vertical;
 }
 
@@ -174,7 +173,7 @@ select{
     text-align: center;
 }
 
-.text-error{
+.text-error,.date-error{
     margin-left: 10px;
     font-size: 12px;
     font-style: italic;
