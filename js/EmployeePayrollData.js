@@ -1,4 +1,3 @@
-let regexName = RegExp('^[A-Z][A-Za-z ]{2,}$');
 class EmployeePayRollData {
     id;
 
