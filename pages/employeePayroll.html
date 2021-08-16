@@ -9,10 +9,8 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../css/employeePayroll.css">
-    <script src="../js/EmployeePayrollData.js"></script>
     <script defer src="../js/payroll_form.js"></script>
     <script src="../js/utility.js"></script>
-    <script src="../js/siteProperties.js"></script>
 </head>
 
 <body>
@@ -26,7 +24,7 @@
         </div>
     </header>
     <div class="form-content">
-        <form action="../pages/home.html" class="form" onreset="resetForm()" onsubmit="save()">
+        <form action="../pages/home.html" class="form" onreset="resetForm()" onsubmit="save(event)">
             <div class="form-head">Employee Payroll Form</div>
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
@@ -160,7 +158,7 @@
                 <textarea class="input" id="notes" name="notes" placeholder="" style="height: 100px"></textarea>
             </div>
             <div class="buttonParent">
-                <a href="./home.html" class="resetButton button cancelButton">Cancel</a>
+                <a href="../pages/home.html" class="resetButton button cancelButton">Cancel</a>
                 <div class="submit-reset">
                     <button type="submit" class="button submitButton" id="submitButton">Submit</button>
                     <button type="reset" class="button resetButton">Reset</button>
