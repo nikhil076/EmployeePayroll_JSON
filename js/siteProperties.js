@@ -1,5 +1,4 @@
-const site_properties = {
-    local_storage: "false",
+let site_properties = {
     home_page: "../pages/home.html",
-    payroll_page: "../pages/employeePayRoll.html",
+    add_emp_payroll_page: "../pages/employeePayroll.html"
 };
