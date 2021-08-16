@@ -1,4 +1,6 @@
-let site_properties = {
+const site_properties = {
+    local_storage: "true",
     home_page: "../pages/home.html",
-    add_emp_payroll_page: "../pages/employeePayroll.html"
+    payroll_page: "../pages/employeePayRoll.html",
+    server_url: "http://127.0.0.1:3000/EmployeePayRollDB"
 };
